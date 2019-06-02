@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>445</width>
-    <height>409</height>
+    <height>437</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>MQTT Simple Client </string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">

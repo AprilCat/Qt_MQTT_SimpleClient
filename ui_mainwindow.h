@@ -236,7 +236,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MQTT Simple Client ", nullptr));
         label->setText(QApplication::translate("MainWindow", "IP", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Port", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "sub topic", nullptr));
