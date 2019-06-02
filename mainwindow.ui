@@ -134,7 +134,7 @@
       <item>
        <widget class="QPushButton" name="btn_sub">
         <property name="text">
-         <string>sub</string>
+         <string>subscribe</string>
         </property>
        </widget>
       </item>
@@ -154,7 +154,7 @@
       <item>
        <widget class="QPushButton" name="btn_pub">
         <property name="text">
-         <string>pub</string>
+         <string>publish</string>
         </property>
        </widget>
       </item>
@@ -177,6 +177,19 @@
          <string>clean</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </item>

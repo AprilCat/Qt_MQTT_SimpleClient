@@ -58,6 +58,7 @@ public:
     QPushButton *btn_pub;
     QSpacerItem *horizontalSpacer_4;
     QPushButton *btn_clean;
+    QSpacerItem *horizontalSpacer_5;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -209,6 +210,10 @@ public:
 
         horizontalLayout_8->addWidget(btn_clean);
 
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_5);
+
 
         verticalLayout->addLayout(horizontalLayout_8);
 
@@ -238,8 +243,8 @@ public:
         label_4->setText(QApplication::translate("MainWindow", "pub topic", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "pub content", nullptr));
         btn_connect->setText(QApplication::translate("MainWindow", "connect", nullptr));
-        btn_sub->setText(QApplication::translate("MainWindow", "sub", nullptr));
-        btn_pub->setText(QApplication::translate("MainWindow", "pub", nullptr));
+        btn_sub->setText(QApplication::translate("MainWindow", "subscribe", nullptr));
+        btn_pub->setText(QApplication::translate("MainWindow", "publish", nullptr));
         btn_clean->setText(QApplication::translate("MainWindow", "clean", nullptr));
     } // retranslateUi
 
