@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -34,7 +34,16 @@ HEADERS += \
 FORMS += \
         mainwindow.ui
 
+INCLUDEPATH += ./qmqtt/include
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/qmqtt/lib/ -lqmqtt
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/qmqtt/lib/ -lqmqttd
+else:unix: LIBS += -L$$PWD/qmqtt/lib/ -lqmqtt
+
+INCLUDEPATH += $$PWD/qmqtt/include
+DEPENDPATH += $$PWD/qmqtt/include
