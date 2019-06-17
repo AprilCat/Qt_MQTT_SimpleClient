@@ -26,6 +26,9 @@ void MainWindow::onBtnConnect()
 {
     m_client->setHost(QHostAddress(ui->lineEdit_IP->text()));
     m_client->setPort(ui->lineEdit_Port->text().toUInt());
+    m_client->setUsername(ui->lineEdit_username->text());
+    m_client->setPassword(ui->lineEdit_password->text().toLatin1());
+
     m_client->connectToHost();
 }
 

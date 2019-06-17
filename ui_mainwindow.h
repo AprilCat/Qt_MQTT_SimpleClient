@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -38,6 +39,12 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
     QLineEdit *lineEdit_Port;
+    QHBoxLayout *horizontalLayout_9;
+    QLabel *label_6;
+    QLineEdit *lineEdit_username;
+    QLabel *label_7;
+    QLineEdit *lineEdit_password;
+    QCheckBox *checkBox_isSSL;
     QHBoxLayout *horizontalLayout_6;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_3;
@@ -67,7 +74,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(445, 409);
+        MainWindow->resize(493, 534);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -111,6 +118,37 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_3);
+
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setSpacing(6);
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        label_6 = new QLabel(centralWidget);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+
+        horizontalLayout_9->addWidget(label_6);
+
+        lineEdit_username = new QLineEdit(centralWidget);
+        lineEdit_username->setObjectName(QString::fromUtf8("lineEdit_username"));
+
+        horizontalLayout_9->addWidget(lineEdit_username);
+
+        label_7 = new QLabel(centralWidget);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+
+        horizontalLayout_9->addWidget(label_7);
+
+        lineEdit_password = new QLineEdit(centralWidget);
+        lineEdit_password->setObjectName(QString::fromUtf8("lineEdit_password"));
+
+        horizontalLayout_9->addWidget(lineEdit_password);
+
+        checkBox_isSSL = new QCheckBox(centralWidget);
+        checkBox_isSSL->setObjectName(QString::fromUtf8("checkBox_isSSL"));
+
+        horizontalLayout_9->addWidget(checkBox_isSSL);
+
+
+        verticalLayout->addLayout(horizontalLayout_9);
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setSpacing(6);
@@ -220,7 +258,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 445, 21));
+        menuBar->setGeometry(QRect(0, 0, 493, 21));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -239,6 +277,9 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MQTT Simple Client ", nullptr));
         label->setText(QApplication::translate("MainWindow", "IP", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Port", nullptr));
+        label_6->setText(QApplication::translate("MainWindow", "username", nullptr));
+        label_7->setText(QApplication::translate("MainWindow", "password", nullptr));
+        checkBox_isSSL->setText(QApplication::translate("MainWindow", "SSL", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "sub topic", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "pub topic", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "pub content", nullptr));
