@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QTime>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -28,7 +28,9 @@ void MainWindow::onBtnConnect()
     m_client->setPort(ui->lineEdit_Port->text().toUInt());
     m_client->setUsername(ui->lineEdit_username->text());
     m_client->setPassword(ui->lineEdit_password->text().toLatin1());
-
+    qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
+    QString clientID = QString("client_%1").arg(qrand()%1000);
+    m_client->setClientId(clientID);
     m_client->connectToHost();
 }
 
